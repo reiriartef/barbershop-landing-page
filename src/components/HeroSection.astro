@@ -1,0 +1,65 @@
+<section
+  class="relative w-full min-h-screen px-6 py-16 mx-auto text-white font-sans bg-black bg-[url('../assets/portrait-2.jpg')] bg-cover bg-top bg-no-repeat"
+>
+  <!-- Hero content -->
+  <div
+    class="flex flex-col md:flex-row items-center md:items-start relative h-full"
+  >
+    <!-- Left Content -->
+    <div
+      class="px-6 md:px-20 md:w-1/2 space-y-6 bg-black/70 p-6 rounded-md mt-10 md:mt-20 mx-auto md:ml-20"
+    >
+      <h1
+        class="text-3xl md:text-5xl font-bold uppercase text-center md:text-left"
+      >
+        Barber Company: Donde el estilo se convierte en un estilo de vida
+      </h1>
+
+      <!-- Scissors & line separator -->
+      <div class="relative my-8 h-8 flex items-center justify-center">
+        <div class="w-full h-px bg-gray-600"></div>
+        <div class="absolute px-2 bg-black text-gray-300 text-xl">✂️</div>
+      </div>
+
+      <p class="text-gray-400 leading-relaxed text-center md:text-left">
+        Ofrecemos más que solo cortes de cabello: un ritual completo de cuidado
+        personal que aumenta tu confianza. ¡Reserva tu sesión y experimenta el
+        arte de la barbería!
+      </p>
+
+      <button
+        class="mt-6 bg-white text-black px-6 py-3 uppercase tracking-wider font-semibold hover:bg-gray-300 transition-all duration-300 mx-auto md:mx-0"
+      >
+        Agenda una cita
+      </button>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Líneas laterales */
+  * {
+    font-family: 'PT Sans', sans-serif;
+  }
+
+  .lines {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #ccc;
+  }
+
+  /* Tijeras en el centro */
+  .scissors {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    background-color: #111; /* Fondo negro para cubrir la línea */
+    padding: 0 0.5rem;
+    color: #ccc;
+  }
+</style>

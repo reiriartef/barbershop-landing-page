@@ -1,0 +1,172 @@
+---
+// No se requiere lógica adicional por ahora
+---
+
+<section
+  id="gallery"
+  class="relative w-full px-6 py-16 mx-auto text-white font-sans"
+>
+  <!-- Header -->
+  <div class="text-center mb-12">
+    <h2 class="text-3xl md:text-4xl font-bold uppercase">Galería</h2>
+
+    <!-- Línea con tijera -->
+    <div class="relative my-8 h-8 flex items-center justify-center">
+      <div class="w-full h-px bg-gray-600"></div>
+      <div class="absolute px-2 bg-black text-gray-300 text-xl">✂️</div>
+    </div>
+  </div>
+
+  <!-- Carousel -->
+  <div class="relative overflow-hidden">
+    <div id="carousel" class="flex transition-transform duration-500">
+      <!-- Imagen 1 -->
+      <div class="min-w-[33.33%] p-2 group relative">
+        <img
+          src="/assets/gallery-1.jpg"
+          alt="Galería 1"
+          class="rounded-lg shadow-lg object-cover w-full h-64"
+        />
+        <!-- Previsualización -->
+        <div
+          class="absolute inset-0 bg-black/70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+        >
+          <img
+            src="/assets/gallery-1.jpg"
+            alt="Galería 1"
+            class="rounded-lg shadow-lg object-cover w-full h-full"
+          />
+        </div>
+      </div>
+      <!-- Imagen 2 -->
+      <div class="min-w-[33.33%] p-2 group relative">
+        <img
+          src="/assets/gallery-2.jpg"
+          alt="Galería 2"
+          class="rounded-lg shadow-lg object-cover w-full h-64"
+        />
+        <!-- Previsualización -->
+        <div
+          class="absolute inset-0 bg-black/70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+        >
+          <img
+            src="/assets/gallery-2.jpg"
+            alt="Galería 2"
+            class="rounded-lg shadow-lg object-cover w-full h-full"
+          />
+        </div>
+      </div>
+      <!-- Imagen 3 -->
+      <div class="min-w-[33.33%] p-2 group relative">
+        <img
+          src="/assets/gallery-3.jpg"
+          alt="Galería 3"
+          class="rounded-lg shadow-lg object-cover w-full h-64"
+        />
+        <!-- Previsualización -->
+        <div
+          class="absolute inset-0 bg-black/70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+        >
+          <img
+            src="/assets/gallery-3.jpg"
+            alt="Galería 3"
+            class="rounded-lg shadow-lg object-cover w-full h-full"
+          />
+        </div>
+      </div>
+      <!-- Imagen 4 -->
+      <div class="min-w-[33.33%] p-2 group relative">
+        <img
+          src="/assets/gallery-4.jpg"
+          alt="Galería 4"
+          class="rounded-lg shadow-lg object-cover w-full h-64"
+        />
+        <!-- Previsualización -->
+        <div
+          class="absolute inset-0 bg-black/70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+        >
+          <img
+            src="/assets/gallery-4.jpg"
+            alt="Galería 4"
+            class="rounded-lg shadow-lg object-cover w-full h-full"
+          />
+        </div>
+      </div>
+      <!-- Imagen 5 -->
+      <div class="min-w-[33.33%] p-2 group relative">
+        <img
+          src="/assets/gallery-5.webp"
+          alt="Galería 5"
+          class="rounded-lg shadow-lg object-cover w-full h-64"
+        />
+        <!-- Previsualización -->
+        <div
+          class="absolute inset-0 bg-black/70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+        >
+          <img
+            src="/assets/gallery-5.webp"
+            alt="Galería 5"
+            class="rounded-lg shadow-lg object-cover w-full h-full"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Controles -->
+    <button
+      id="prev"
+      class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black"
+    >
+      &#8592;
+    </button>
+    <button
+      id="next"
+      class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black"
+    >
+      &#8594;
+    </button>
+  </div>
+</section>
+
+<script>
+  const carousel = document.getElementById('carousel');
+  const prev = document.getElementById('prev');
+  const next = document.getElementById('next');
+
+  let currentIndex = 0;
+
+  const updateCarousel = () => {
+    const width = carousel.parentElement.offsetWidth;
+    carousel.style.transform = `translateX(-${currentIndex * width}px)`;
+  };
+
+  next.addEventListener('click', () => {
+    const totalItems = carousel.children.length;
+    if (currentIndex < totalItems - 3) {
+      currentIndex++;
+      updateCarousel();
+    }
+  });
+
+  prev.addEventListener('click', () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+      updateCarousel();
+    }
+  });
+
+  window.addEventListener('resize', updateCarousel);
+</script>
+
+<style>
+  * {
+    font-family: 'PT Sans', sans-serif;
+  }
+
+  p,
+  ul {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 18px;
+    text-align: justify;
+  }
+</style>

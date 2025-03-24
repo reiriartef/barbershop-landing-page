@@ -1,0 +1,173 @@
+---
+// No se requiere lógica adicional por ahora
+---
+
+<section
+  id="services"
+  class="relative w-full px-6 py-16 mx-auto text-white font-sans"
+>
+  <!-- Header -->
+  <div class="text-center mb-12">
+    <h2 class="text-3xl md:text-4xl font-bold uppercase">Servicios</h2>
+
+    <!-- Línea con tijera -->
+    <div class="relative my-8 h-8 flex items-center justify-center">
+      <div class="w-full h-px bg-gray-600"></div>
+      <div class="absolute px-2 bg-black text-gray-300 text-xl">✂️</div>
+    </div>
+  </div>
+
+  <!-- Cards -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <!-- Card 1: Corte de Cabello y Estilizado -->
+    <div
+      class="glass-card p-6 rounded-lg shadow-lg"
+      style="background-image: url('/assets/services-1.jpg'); background-size: cover; background-position: center;"
+    >
+      <h3 class="text-2xl font-bold mb-4">Corte de Cabello y Estilizado</h3>
+      <p class="text-gray-300 mb-4">
+        Ofrecemos cortes modernos y clásicos con estilizado profesional para un
+        look impecable.
+      </p>
+      <ul class="text-gray-300 mb-4 space-y-2">
+        <li>
+          <div class="flex justify-between">
+            <span>Corte de Bienvenida</span>
+            <span class="text-red-500">$6</span>
+          </div>
+          <div class="w-full h-px bg-gray-600 my-2"></div>
+        </li>
+        <li>
+          <div class="flex justify-between">
+            <span>Corte Normal</span>
+            <span class="text-red-500">$10</span>
+          </div>
+          <div class="w-full h-px bg-gray-600 my-2"></div>
+        </li>
+        <li>
+          <div class="flex justify-between">
+            <span>Corte y Barba</span>
+            <span class="text-red-500">$15</span>
+          </div>
+          <div class="w-full h-px bg-gray-600 my-2"></div>
+        </li>
+        <li>
+          <div class="flex justify-between">
+            <span>Corte y Barba VIP</span>
+            <span class="text-red-500">$20</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Card 2: Afeitado -->
+    <div
+      class="glass-card p-6 rounded-lg shadow-lg"
+      style="background-image: url('/assets/services-2.jpg'); background-size: cover; background-position: center;"
+    >
+      <h3 class="text-2xl font-bold mb-4">Afeitado</h3>
+      <p class="text-gray-300 mb-4">
+        Disfruta de un afeitado clásico con navaja y toalla caliente para una
+        experiencia relajante.
+      </p>
+      <ul class="text-gray-300 mb-4 space-y-2">
+        <li>
+          <div class="flex justify-between">
+            <span>Barba</span>
+          </div>
+          <div class="w-full h-px bg-gray-600 my-2"></div>
+        </li>
+        <li>
+          <div class="flex justify-between">
+            <span>Barba con exfoliación</span>
+          </div>
+          <div class="w-full h-px bg-gray-600 my-2"></div>
+        </li>
+        <li>
+          <div class="flex justify-between">
+            <span>Barba con toalla caliente</span>
+            <span class="text-red-500">$8</span>
+          </div>
+          <div class="w-full h-px bg-gray-600 my-2"></div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Card 3: Otros Servicios -->
+    <div
+      class="glass-card p-6 rounded-lg shadow-lg"
+      style="background-image: url('/assets/services-3.jpg'); background-size: cover; background-position: center;"
+    >
+      <h3 class="text-2xl font-bold mb-4">Otros Servicios</h3>
+      <p class="text-gray-300 mb-4">
+        Ofrecemos servicios adicionales como colorimetría y tratamientos
+        capilares personalizados.
+      </p>
+      <ul class="text-gray-300 mb-4 space-y-2">
+        <li>
+          <div class="flex justify-between">
+            <span>Colorimetría</span>
+            <span class="text-red-500">Consultar</span>
+          </div>
+          <div class="w-full h-px bg-gray-600 my-2"></div>
+        </li>
+        <li>
+          <div class="flex justify-between">
+            <span>Manicura</span>
+            <span class="text-red-500">$6</span>
+          </div>
+          <div class="w-full h-px bg-gray-600 my-2"></div>
+        </li>
+        <li>
+          <div class="flex justify-between">
+            <span>Manicura con técnica de pulido</span>
+            <span class="text-red-500">$10</span>
+          </div>
+          <div class="w-full h-px bg-gray-600 my-2"></div>
+        </li>
+        <li>
+          <div class="flex justify-between">
+            <span>Limpieza de Cejas</span>
+            <span class="text-red-500">$2</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Call to Action Button -->
+  <div class="text-center mt-12">
+    <button
+      class="bg-white text-black px-6 py-3 uppercase tracking-wider font-semibold hover:bg-gray-300 transition-all duration-300"
+    >
+      Agenda tu cita
+    </button>
+  </div>
+</section>
+
+<style>
+  * {
+    font-family: 'PT Sans', sans-serif;
+  }
+
+  p,
+  ul {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 18px;
+    text-align: justify;
+  }
+
+  .glass-card {
+    background: rgba(0, 0, 0, 0.6); /* Fondo negro semitransparente */
+    backdrop-filter: blur(10px); /* Efecto de desenfoque */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Borde translúcido */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra */
+    background-blend-mode: overlay; /* Mezcla el fondo con el color negro */
+  }
+
+  .glass-card:hover {
+    background: rgba(0, 0, 0, 0.8); /* Fondo más oscuro al pasar el mouse */
+    transform: scale(1.05); /* Efecto de zoom */
+    transition: all 0.3s ease-in-out;
+  }
+</style>
