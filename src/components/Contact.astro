@@ -54,12 +54,11 @@
       </div>
     </div>
 
-    <!-- Mapa (Imagen estática o iframe de Google Maps) -->
+    <!-- Mapa (Iframe de Google Maps) -->
     <div class="w-full h-64 md:h-auto">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d747.7898645653156!2d-71.63260615413917!3d10.570648494075249!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e89971b3acb82d7%3A0xf13bdc1c716e991c!2sBarbershop%20San%20Francisco!5e0!3m2!1ses!2sve!4v1742842580948!5m2!1ses!2sve"
-        width="600"
-        height="450"
+        class="w-full h-full rounded-lg"
         style="border:0;"
         allowfullscreen=""
         loading="lazy"
@@ -69,3 +68,9 @@
     </div>
   </div>
 </section>
+
+<style>
+  iframe {
+    aspect-ratio: 16 / 9; /* Mantiene la proporción del iframe */
+  }
+</style>
